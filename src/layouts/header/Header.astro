@@ -30,7 +30,7 @@ import BtnDefault from "../../components/BtnDefault.astro";
             </li>
             <li>
                 <BtnDefault 
-                style="bg-blue-500 text-[var(--blue-dark)] font-semibold"
+                style="bg__blue bg-blue-500 text-[var(--blue-dark)] font-semibold"
                 title="Autenticación"
                 />
             </li>
@@ -39,6 +39,9 @@ import BtnDefault from "../../components/BtnDefault.astro";
 </header>
 
 <style>
+    .bg__blue{
+        background-color: var(--blue);
+    }
     header nav ul:nth-child(2):hover li{
         filter: blur(5px);
     }
