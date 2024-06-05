@@ -1,11 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LayoutMaxWidth from "../layouts/LayoutMaxWidth.astro";
-
+import Header from "../layouts/header/Header.astro";
 import Hero from "../components/admin/hero.astro";
 ---
 
 <Layout title="Panel de administración">
+    
+    <Header />
+
     <LayoutMaxWidth>
         <Hero />
         
