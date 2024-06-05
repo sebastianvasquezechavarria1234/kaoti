@@ -1,0 +1,55 @@
+---
+const { style, title, subTitle } = Astro.props;
+---
+
+<article class=`
+${style}
+w-[50%] border-white/80 px-[30px] max-sm:w-full
+`>
+    <h1>
+        {title}
+    </h1>
+    <p>
+        {subTitle}
+    </p>
+</article>
+
+<style>
+    article:nth-child(1){
+        border-left: 1px solid white;
+    }
+    article:nth-child(2){
+        border-left: 1px solid white;
+    }
+    article:nth-child(3){
+        border-left: 1px solid white;
+    }
+    article:nth-child(4){
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+    @media screen and (max-width: 1280px){
+        article:nth-child(1){
+            border-left: 1px none white;
+            border-bottom: 1px solid white;
+            padding: 30px 0px;
+        }
+        article:nth-child(2){
+            border-left: 1px none white;
+            border-bottom: 1px solid white;
+            padding: 30px 0px;
+        }
+        article:nth-child(3){
+            border-left: 1px none white;
+            border-bottom: 1px solid white;
+            padding: 30px 0px;
+        }
+        article:nth-child(4){
+            border-left: 1px none white;
+            border-right: 1px none white;
+            border-bottom: 1px solid white;
+            padding: 30px 0px;
+        }
+        
+    }
+</style>

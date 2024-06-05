@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LayoutMaxWidth from '../layouts/LayoutMaxWidth.astro';
+import Header from '../layouts/header/Header.astro';
+import Hero from '../components/home/Hero.astro';
+import Estadisticas from '../components/home/Estadisticas.astro';
+import Flexbox from '../components/home/Flexbox.astro';
+import Map from '../components/Map.astro';
+import Footer from '../layouts/Footer.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<LayoutMaxWidth>
+		<Header />
+
+		<Hero />
+
+		<Estadisticas />
+
+		<Flexbox />
+
+		<Map />
+
+		<Footer />
+	</LayoutMaxWidth>
+</Layout>

@@ -1,0 +1,14 @@
+---
+const { style, title } = Astro.props;
+---
+
+<a 
+class=`
+    ${style}
+    flex items-center gap-[10px] bg-white/5 py-[10px] px-[15px] rounded-[6px] border-t border-white/20 shadow-[inset_-3px_-3px_10px_#ffffff22] opacity-100 max-sm:w-full max-sm:justify-center 
+    `
+    href=""
+    >
+    {title}
+    <slot />
+</a>

@@ -1,0 +1,52 @@
+---
+import HeaderBtn from "./HeaderBtn.astro";
+import BtnDefault from "../../components/BtnDefault.astro";
+---
+
+<header>
+    <nav class="flex justify-between items-center py-[10px]">
+        <ul>
+            <li>
+                <a 
+                    class="text-[24px] font-bold opacity-100"
+                    href="/">Komunly</a>
+            </li>
+        </ul>
+        <ul class="flex items-center gap-[20px]">
+            <li>
+                <a 
+                    class=""
+                    href="/">Inicio</a>
+            </li>
+            <li>
+                <a 
+                    class=""
+                    href="/">Calendario</a>
+            </li>
+            <li>
+                <a 
+                    class=""
+                    href="/">Noticias</a>
+            </li>
+            <li>
+                <BtnDefault 
+                style="bg-blue-500 text-[var(--blue-dark)] font-semibold"
+                title="Autenticación"
+                />
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    header nav ul:nth-child(2):hover li{
+        filter: blur(5px);
+    }
+    header nav ul:nth-child(2) li{
+        transition: all .3s ease-in-out;
+    }
+    header nav ul:nth-child(2) li:hover{
+        filter: blur(0px);
+        opacity: 1;
+    }
+</style>

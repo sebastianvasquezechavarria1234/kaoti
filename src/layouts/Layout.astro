@@ -1,0 +1,99 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- FONT -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+	</head>
+	<body class="bg-[var(--blue-dark)] text-white text-[18px]">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,600;12..96,800&display=swap');
+
+	:root{
+	--yellow: #DBFE5D;
+    --blue: #53B0F9;
+    --blue-dark: #010334;
+    --purple: purple;
+    --green: #8FDCC2;
+    --black: #010101;
+	}
+    *{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    scroll-behavior: smooth;
+
+     }
+    h1{
+		font-size: 6rem;
+		line-height: 80px;
+		margin-bottom: 10px;
+	}
+    h2{
+		font-size: 5rem;
+		line-height: 70px;
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+	h4{
+		font-size: 1.3rem;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	a,p{
+		opacity: .8;
+		font-weight: 100;
+	}
+	h2{
+		margin-bottom: 30px;
+	}
+	section{
+        animation: entrada 1s;
+    }
+    @keyframes entrada {
+        0%{
+			opacity: 0;
+            transform: translateY(800px) scale(.8);
+        } 
+    }
+	@media screen and (max-width: 600px){
+		h1{
+			font-size: 4rem;
+			line-height: 50px;
+		}
+		h2{
+			font-size: 2.5rem;
+			line-height: 40px;
+			margin-bottom: 20px;
+		}
+		h4{
+			font-size: 1rem;
+		}
+		a,p{
+			font-size: 16px;
+		}
+		svg{
+			width: 18px;
+			height: 18px;
+		}
+		
+	}
+</style>

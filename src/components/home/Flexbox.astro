@@ -1,0 +1,83 @@
+---
+import Title from "../Title.astro"
+import FlexboxCard from "./FlexboxCard.astro"
+---
+
+<section class="mt-[120px] flex ">
+    <div class="relative z-10 flex flex-col gap-[20px] w-[50%] max-xl:w-full">
+        <Title
+            title="Servicios"
+         />
+        <FlexboxCard
+            title="Publica contenido multimedia"
+            description="Comparte imagenes y videos de la mejor calidad con tu comunidad. Conviertete en un Kreator y accede a eventos exclusivos por el mundo de parte de Komunly."
+         />
+        <FlexboxCard
+            blur1="bg-[var(--green)]"
+            blur2="bg-[var(--yellow)]"
+            style="z-10"
+            title="Interactúa respetuosamente"
+            description="Aprovecha las funcionalidades que ofrece Komunly para interactuar con los demás usuarios. Es importante que respetes las normas de la comunidad para evitar ser baneado"
+         />
+        <FlexboxCard
+            style="z-20"
+            title="!Acción, reacción¡"
+            description="En Komunly, las buenas acciones tienen recompensa. Crear contenido entretenido o de valor, ya sea en video, imagenes o incluso en comentarios ¡tiene premio!"
+         />
+        <FlexboxCard
+            blur1="bg-[var(--green)]"
+            blur2="bg-[var(--yellow)]"
+            style="z-30"
+            title="Monetiza tu cuenta"
+            description="Te presentamos los komuns! Una moneda digital que puedes utiizar dentro del universo Komunly para enviar o recibir con otros usuarios y mucho más..."
+         />
+    </div>
+    <picture class="sticky top-[500px] w-[50%] h-full flex justify-center items-center">
+        <img 
+            class="glow w-[50%]"
+            src="/glow-blue.webp" 
+            alt="glow">
+        <img 
+            class="absolute bottom-[45%] w-[40%]"
+            src="/linear-anm.webp" 
+            alt="glow">
+        <img 
+            class="linear__anm--2 absolute top-[45%] w-[15%] -z-10"
+            src="/linear-anm.webp" 
+            alt="glow">
+        <img 
+            class="rotate-[70deg] absolute top-0 left-[60%] w-[15%] -z-10"
+            src="/linear-anm.webp" 
+            alt="glow">
+    </picture>
+</section>
+
+<style>
+    .glow{
+        animation: rotate 30s infinite linear;
+    }
+    .linear__anm--2{
+        rotate: 180deg;
+        animation: rotate2 10s infinite linear alternate-reverse;
+    }
+    @keyframes rotate {
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes rotate2 {
+        0%{
+            transform: rotate(-10deg);
+        }
+        100%{
+            transform: rotate(10deg);
+        }
+    }
+    @media screen and (max-width: 1280px){
+        picture{
+            display: none;
+        }
+        
+    }
+
+</style>

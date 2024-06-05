@@ -1,0 +1,17 @@
+---
+---
+
+<main class="max-w-[1280px] mx-auto px-[20px]">
+    <slot />
+    <div class="absolute top-[-10%] left-[-10%] blur-[100px] opacity-50 rounded-full block w-[600px] h-[600px] bg-[var(--purple)] max-sm:w-[200px] max-sm:h-[200px]"></div>
+
+    <div class="absolute top-[15%] right-[10%] blur-[100px] opacity-50 rounded-full block w-[600px] h-[600px] bg-[var(--purple)] max-sm:w-[200px] max-sm:h-[200px]"></div>
+</main>
+
+<style>
+    @media screen and (max-width: 1300px){
+        main{
+            overflow: hidden;
+        }
+    }
+</style>

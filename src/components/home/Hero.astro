@@ -1,0 +1,68 @@
+---
+import BtnDefault from "../BtnDefault.astro"
+import Title from "../Title.astro"
+
+---
+
+<section class="flex items-center mt-[120px] relative z-10 max-lg:flex-col">
+    <div class="w-[75%] max-lg:w-full">
+        <Title 
+            title="Bienvenido a Komunly"
+        />
+        <h2 class="w-[700px] max-lg:w-full">
+            La nueva red social diseñada para <span>revolucionar</span>
+        </h2>
+        <p class="mb-[20px]">
+            Nuestra plataforma ofrece una amplia gama de funcionalidades, desde la publicación de contenido multimedia hasta la realización de transferencias entre usuarios y la creación de eventos.
+        </p>
+        <div class="flex flex-wrap items-center gap-[10px] w-[130%] max-lg:flex-wrap max-lg:w-full ">
+            <BtnDefault
+            style="bg-blue-500 text-[var(--blue-dark)] font-semibold"
+            title="Descargar en Android"
+            >
+                <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-android"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 10l0 6" /><path d="M20 10l0 6" /><path d="M7 9h10v8a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-8a5 5 0 0 1 10 0" /><path d="M8 3l1 2" /><path d="M16 3l-1 2" /><path d="M9 18l0 3" /><path d="M15 18l0 3" /></svg>
+            </BtnDefault>
+
+            <BtnDefault
+            title="Descargar en IOS"
+            >
+                <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-apple"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" /><path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" /></svg>
+            </BtnDefault>
+
+            <BtnDefault
+            style="bg-white/0 border-none shadow-none"
+            title="Entrar desde el navegador"
+            >
+                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-world"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
+            </BtnDefault>
+
+        </div>
+    </div>
+
+    <picture class="relative w-[80%] flex justify-center items-center max-lg:w-full">
+        <video 
+            class="w-[800px] block max-lg:w-full"
+            src="/video.webm" 
+            autoplay
+            loop>
+        </video>
+    </picture>
+</section>
+
+<style>
+    h2 span{
+        color: var(--green);
+        animation: anm__color 5s infinite linear;
+    }
+    @keyframes anm__color {
+        0%, 100% {
+            color: var(--purple);
+            text-shadow: 0px 0px 30px rgba(128, 0, 128, 0.539);
+         }
+
+         50% {
+             color: var(--green);
+             text-shadow: 0px 0px 30px #3ce7ae79;
+        }
+    }
+</style>
