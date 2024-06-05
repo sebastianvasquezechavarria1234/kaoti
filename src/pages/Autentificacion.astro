@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LayoutMaxWidth from "../layouts/LayoutMaxWidth.astro";
+import Header from "../layouts/header/Header.astro";
+import MnResponsive from "../layouts/MnResponsive.astro";
+import Title from "../components/Title.astro";
+import Hero from "../components/autentificacion/Hero.astro";
+---
+
+<Layout title="Autentificación">
+
+    <Header />
+
+    <MnResponsive />
+
+    <LayoutMaxWidth
+        style="min-h-[100vh] flex items-center">
+        <Hero />
+    </LayoutMaxWidth>
+</Layout>

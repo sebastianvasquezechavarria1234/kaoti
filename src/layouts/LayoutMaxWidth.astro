@@ -1,7 +1,8 @@
 ---
+const {style} = Astro.props;
 ---
 
-<main class="max-w-[1280px] mx-auto px-[20px]">
+<main class=`${style} max-w-[1280px] mx-auto px-[20px]`>
     <slot />
     <div class="absolute top-[-10%] left-[-10%] blur-[100px] opacity-50 rounded-full block w-[600px] h-[600px] bg-[var(--purple)] max-sm:w-[200px] max-sm:h-[200px]"></div>
 

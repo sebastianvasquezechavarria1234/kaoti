@@ -1,0 +1,16 @@
+---
+const { title, style, type, name } = Astro.props;
+---
+<label class="block mb-[20px]">
+    <p class="opacity-100">{title}</p>
+    <input 
+        class=`
+            ${style}
+            py-[10px] px-[15px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-full block
+        `
+        type={type}
+        required
+        name={name}
+        minlength="3"
+        maxlength="60">
+</label>

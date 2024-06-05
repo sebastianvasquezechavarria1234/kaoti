@@ -1,0 +1,111 @@
+---
+
+import Title from "../Title.astro";
+import Input from "./Input.astro";
+---
+<section class="overflow-hidden block relative z-10 w-[500px] mx-auto">
+    <ul id="slider"class="w-[200%] flex h-full">
+        <form 
+            id="form1"
+            class="w-full bg-white/5 p-[24px] rounded-[10px] border-[1px] border-white/20"
+            action="/Autentificacion">
+            <Title 
+               title="Regístrate"
+            />
+            <Input
+                type="text"
+                title="Nombre de usuario :"
+             />
+            <Input
+                type="email"
+                title="Correo electrónico :"
+             />
+             <div class="flex gap-[10px] max-sm:flex-col max-sm:gap-[0px]">
+                 <Input
+                    type="password"
+                     title="Contraseña :"
+                  />
+                 <Input
+                    type="password"
+                     title="Repetir contraseña :"
+                  />
+             </div>
+             <p id="login" class="cursor-pointer underline text-blue-100 block mb-[20px]">Ya tienes una cuenta? Inicia sesión</p>
+             <input 
+                class="bg-[var(--blue)] p-[13px] w-[100%] text-black rounded-[6px] cursor-pointer hover:bg-blue-600 duration-300 font-semibold"
+                type="submit"
+                value="Registrarme">
+        </form>
+
+        <form 
+            id="form2"
+            class="w-full flex flex-col justify-end bg-white/5 p-[24px] rounded-[10px] border-[1px] border-white/20"
+            action="/Autentificacion">
+            <Title 
+               title="Inicia sesión"
+            />
+            <Input
+                type="text"
+                title="Nombre de usuario :"
+             />
+             <Input
+                type="password"
+                 title="Contraseña :"
+              />
+             <p id="register" class="cursor-pointer underline text-blue-100 block mb-[20px]">No tienes una cuenta? Regístrate</p>
+             <input 
+                class="bg-[var(--blue)] p-[13px] w-full text-black rounded-[6px] cursor-pointer hover:bg-blue-600 duration-300 font-semibold"
+                type="submit"
+                value="Iniciar sesión">
+        </form>
+
+    </ul>
+</section>
+
+<style>
+    #form2{
+        opacity: 0;
+        transition: all .6s ease-in-out;
+        transform: scale(.8) translateX(50px) rotate(10deg);
+    }
+    #form2.formActive{
+        opacity: 1;
+        transform: scale(1) translateX(0px) rotate(0deg);
+    }
+    #form1{
+        transition: all .6s ease-in-out;
+        opacity: 1;
+        transform: scale(1) translateX(0px) rotate(0deg);
+        
+    }
+    #form1.formActiveOpacity{
+        opacity: 0;
+        transform: scale(.8) translateX(-50px) rotate(-10deg);
+    }
+    #slider{
+        transition: all .6s ease-in-out;
+    }
+    .sliderActive{
+        transform: translateX(-50%);
+    }
+</style>
+
+<script>
+    const login = document.querySelector("#login");
+    const register = document.querySelector("#register");
+    const form1 = document.querySelector("#form1");
+    const form2 = document.querySelector("#form2");
+    const slider = document.querySelector("#slider");
+
+    login.addEventListener("click", () => {
+        slider.classList.add("sliderActive");
+        form2.classList.add("formActive");
+        form1.classList.add("formActiveOpacity");
+    })
+    register.addEventListener("click", () => {
+        slider.classList.remove("sliderActive");
+        form2.classList.remove("formActive");
+        form1.classList.remove("formActiveOpacity");
+    })
+
+</script>

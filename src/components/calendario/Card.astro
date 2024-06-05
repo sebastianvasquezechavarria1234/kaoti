@@ -1,0 +1,24 @@
+---
+const { img, mes, subTitle } = Astro.props;
+---
+
+<article class="p-[5px] flex flex-col gap-[5px] border-[1px] border-white/30 rounded-[10px] bg-white/5">
+    <picture class="w-full h-[230px]">
+        <img 
+            class="object-cover object-center w-full h-full grayscale-[100%] hover:grayscale-0 duration-300"
+            src={img} 
+            alt="calendario">
+    </picture>
+    <p class="w-full flex items-center justify-center gap-[10px] bg-white/10 p-[10px] rounded-[5px]">
+        <span class="italic">
+            {mes}
+        </span>
+        {subTitle}
+    </p>
+</article>
+
+<style>
+    article{
+        width: calc(33% - 5px);
+    }
+</style>
