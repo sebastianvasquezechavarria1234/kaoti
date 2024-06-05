@@ -1,11 +1,14 @@
 ---
-const { img, mes, subTitle } = Astro.props;
+const { style, img, mes, subTitle } = Astro.props;
 ---
 
 <article class="p-[5px] flex flex-col gap-[5px] border-[1px] border-white/30 rounded-[10px] bg-white/5">
-    <picture class="w-full h-[230px]">
+    <picture class="overflow-hidden w-full flex justify-center items-center h-[230px]">
         <img 
-            class="object-cover object-center w-full h-full grayscale-[100%] hover:grayscale-0 duration-300"
+            class=`
+                ${style}
+                rounded-[10px] object-cover object-center w-full h-full grayscale-[100%] hover:grayscale-0 duration-300
+            `
             src={img} 
             alt="calendario">
     </picture>
@@ -20,5 +23,28 @@ const { img, mes, subTitle } = Astro.props;
 <style>
     article{
         width: calc(33% - 5px);
+    }
+    @media screen and (max-width: 930px){
+        article{
+            width: calc(50% - 5px);
+        }
+        picture{
+            height: 25vw;
+        }
+        p{
+            text-wrap: nowrap;
+            justify-content: start;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    @media screen and (max-width: 600px){
+        article{
+            width: 100%;
+        }
+        picture{
+            height: 45vw;
+        }
     }
 </style>

@@ -4,6 +4,8 @@ import LayoutMaxWidth from "../layouts/LayoutMaxWidth.astro";
 import Header from "../layouts/header/Header.astro";
 import MnResponsive from "../layouts/MnResponsive.astro";
 import Hero from "../components/calendario/Hero.astro";
+import Map from "../components/Map.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
 <Layout title="Calendario">
@@ -15,6 +17,10 @@ import Hero from "../components/calendario/Hero.astro";
     <LayoutMaxWidth>
         
         <Hero />
+
+        <Map />
+        
+        <Footer />
 
     </LayoutMaxWidth>
 </Layout>
