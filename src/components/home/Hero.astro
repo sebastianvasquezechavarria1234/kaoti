@@ -58,6 +58,7 @@ import Title from "../Title.astro"
     }
     .hero__responsive{
         animation: hero 5s infinite;
+        display: none;
     }
     @keyframes hero {
         0%,100%{
@@ -81,6 +82,10 @@ import Title from "../Title.astro"
     @media screen and (max-width: 600px){
         video{
             display: none;
+        }
+        .hero__responsive{
+        animation: hero 5s infinite;
+        display: block;
         }
     }
 </style>
