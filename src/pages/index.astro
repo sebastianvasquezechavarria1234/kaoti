@@ -7,12 +7,16 @@ import Estadisticas from '../components/home/Estadisticas.astro';
 import Flexbox from '../components/home/Flexbox.astro';
 import Map from '../components/Map.astro';
 import Footer from '../layouts/Footer.astro';
+import MnResponsive from '../layouts/MnResponsive.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<LayoutMaxWidth>
-		<Header />
 
+	<Header />
+	
+	<MnResponsive />
+
+	<LayoutMaxWidth>
 		<Hero />
 
 		<Estadisticas />

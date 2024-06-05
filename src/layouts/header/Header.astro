@@ -3,8 +3,8 @@ import HeaderBtn from "./HeaderBtn.astro";
 import BtnDefault from "../../components/BtnDefault.astro";
 ---
 
-<header>
-    <nav class="flex justify-between items-center py-[10px]">
+<header class="sticky top-0 z-50 flex items-center backdrop-blur-[16px] border-b-[1px] border-white/30 h-[70px]">
+    <nav class="flex justify-between w-full items-center py-[10px] max-w-[1280px] mx-auto px-[20px]">
         <ul>
             <li>
                 <a 
@@ -34,6 +34,11 @@ import BtnDefault from "../../components/BtnDefault.astro";
                 title="Autenticación"
                 />
             </li>
+            <li id="iconMn" class="flex flex-col gap-[5px] cursor-pointer opacity-80">
+                <span class="block w-[20px] h-[1px] bg-white"></span>
+                <span class="block w-[20px] h-[1px] bg-white"></span>
+                <span class="block w-[20px] h-[1px] bg-white"></span>
+            </li>
         </ul>
     </nav>
 </header>
@@ -51,5 +56,19 @@ import BtnDefault from "../../components/BtnDefault.astro";
     header nav ul:nth-child(2) li:hover{
         filter: blur(0px);
         opacity: 1;
+    }
+    header nav ul:nth-child(2) li:nth-child(5){
+        display: none
+    }
+    @media screen and (max-width: 600px) {
+        header nav ul:nth-child(2) li:nth-child(1),
+        header nav ul:nth-child(2) li:nth-child(2),
+        header nav ul:nth-child(2) li:nth-child(3),
+        header nav ul:nth-child(2) li:nth-child(4){
+            display: none;
+        }
+        header nav ul:nth-child(2) li:nth-child(5){
+        display: flex;
+    }
     }
 </style>
