@@ -1,0 +1,61 @@
+---
+import Title from "../../Title.astro";
+import HeroSearchCard from "./HeroSearchCard.astro";
+---
+
+<section class="relative z-10 mt-[120px]">
+    <Title 
+        title="explora"
+        subTitle="Search"
+    />
+    <!-- tabs -->
+    <div class="flex items-center gap-[10px] mb-[20px]">
+        <a 
+            class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/HomeUsers/Explorar">
+            Post
+        </a>
+        <a 
+            class="active py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/HomeUsers/explorar/Search">
+            Explorar
+        </a>
+        <a 
+            class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/HomeUsers/explorar/Calendario">
+            Calendario
+        </a>
+
+    </div>
+
+    <!-- SEARCH -->
+    <div class="relative flex gap-[10px] mb-[20px]">
+        <span class="absolute left-[18px] top-[50%] translate-y-[-50%]">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+        </span>
+        <input 
+             class="py-[10px] pl-[55px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-[90%] block duration-300 transition-all max-sm:w-full"
+            type="text"          
+            placeholder="Que estas Buscando?"
+        >
+        <input 
+            class="py-[12px] px-[20px] bg-blue-500 rounded-[6px] text-black font-semibold"
+            type="submit"
+            value="Buscar">
+    </div>
+
+    <div class="flex flex-col gap-[10px]">
+        <HeroSearchCard />
+        <HeroSearchCard />
+        <HeroSearchCard />
+
+    </div>
+</section>
+
+<style>
+    .active{
+        background-color: transparent;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+    }
+</style>
