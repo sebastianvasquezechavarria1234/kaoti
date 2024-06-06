@@ -1,19 +1,24 @@
 --- 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, style } = Astro.props;
 
 ---
 
-<article class="bg-white/10 backdrop-blur-[16px] p-[24px] rounded-[10px] border-[1px] border-white/30">
+<article class=`${style} bg-white/10 backdrop-blur-[16px] p-[24px] rounded-[10px] border-[1px] border-white/30`>
     <span class=" rounded-full mb-[30px] justify-center items-center">
         <slot />
     </span>
-    <h4>{title}</h4>
-    <p>{subtitle}</p>
+    <div class="w-[70%]">
+        <h4>{title}</h4>
+        <p>{subtitle}</p>
+    </div>
 </article>
 
 <style>
     article{
         width: calc(33% - 10px);
+    }
+    .layout{
+        align-items: center;
     }
     span{
         display: inline-flex;
