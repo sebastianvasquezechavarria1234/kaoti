@@ -1,0 +1,27 @@
+---
+const { href, style, title } = Astro.props;
+---
+
+<!-- BTN DEFAULT REPORTES -->
+<a 
+    class=`
+        ${style} py-[10px] px-[20px] bg-red-500 rounded-[6px] flex items-center gap-[10px] font-semibold
+        `
+    href={href}>
+    {title}
+    <slot />
+</a>
+
+<style>
+    /* COLOR BTN PERMITIR, SENSIBLE, ELIMINAR */
+    .permitir{
+        background-color: rgb(27, 170, 27);
+    }
+    .sensible{
+        background-color: yellow;
+        color: black;
+    }
+    .eliminar{
+        background-color: rgb(223, 47, 47);
+    }
+</style>

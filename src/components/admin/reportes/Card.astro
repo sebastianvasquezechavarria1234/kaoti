@@ -1,0 +1,59 @@
+---
+import BtnReportes from "./BtnReportes.astro"
+
+const { avatar, usersName, body } = Astro.props;
+---
+
+<!-- CARD -->
+<article class="w-full border-[1px] border-white/30 bg-white/10 rounded-[10px]">
+    <!-- HEADER CARD -->
+    <div class="flex justify-between items-center p-[24px] border-b-[1px] border-white/30">
+        <!-- AVATAR CARD -->
+        <picture class="w-[60px] h-[60px] block rounded-full overflow-hidden">
+            <img 
+                class="w-full h-full object-cover"
+                src={avatar} 
+                alt="avatar">
+        </picture>
+        <!-- USERS NAME -->
+        <p>{usersName}</p>    
+    </div>
+    <!-- BODY CARD PICTURE -->
+    <picture class="p-[24px] w-full overflow-hidden flex justify-center items-center">
+        <img 
+            class="w-full h-full object-container object-center rounded-[6px]"
+            src={body} 
+            alt="Reportes img">
+    </picture>
+    <!-- CONTROL CARD TAB -->
+     <div class="flex flex-wrap p-[24px] border-t-[1px] border-white/30 items-center gap-[10px]">
+        <!-- BTN TAB -->
+        <BtnReportes
+            style="permitir"
+            href="/Reportes"
+            title="Permitir"
+        >
+            <!-- SVG TAB -->
+            <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-forward-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 14l4 -4l-4 -4" /><path d="M19 10h-11a4 4 0 1 0 0 8h1" /></svg>
+        </BtnReportes>
+        <!-- BTN TAB -->
+        <BtnReportes
+            style="sensible"
+            href="/Reportes"
+            title="Sensible"
+        >
+            <!-- SVG TAB -->
+            <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-accessible"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M10 16.5l2 -3l2 3m-2 -3v-2l3 -1m-6 0l3 1" /><circle cx="12" cy="7.5" r=".5" fill="currentColor" /></svg>
+        </BtnReportes>
+        <!-- BTN TAB -->
+        <BtnReportes
+            style="eliminar"
+            href="/Reportes"
+            title="Eliminar"
+        >
+            <!-- SVG TAB -->
+            <svg  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trash"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
+        </BtnReportes>
+
+     </div>
+</article>

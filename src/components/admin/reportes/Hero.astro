@@ -1,0 +1,43 @@
+---
+import Title from "../../Title.astro";
+import Card from "../reportes/Card.astro";
+---
+
+<section class="relative z-10 mt-[120px] pb-[120px]">
+    <Title 
+        title="Panel de administración"
+        subTitle="(Reportes)"
+    />
+    <div class="flex flex-col gap-[20px]">
+        <Card 
+            avatar="/avatar.jpeg"
+            usersName="Victor 1"
+            body="/reportes-2.avif"
+        />
+        <Card 
+            avatar="/reportes-3.avif"
+            usersName="Victor 2"
+            body="/reportes-1.avif"
+        />
+        <Card 
+            avatar="/reportes-1.avif"
+            usersName="Sebastián"
+            body="/reportes-3.avif"
+        />
+        <Card 
+            avatar="/avatar.jpeg"
+            usersName="Victor 1"
+            body="/reportes-2.avif"
+        />
+        <Card 
+            avatar="/reportes-3.avif"
+            usersName="Victor 2"
+            body="/reportes-1.avif"
+        />
+        <Card 
+            avatar="/reportes-1.avif"
+            usersName="Sebastián"
+            body="/reportes-3.avif"
+        />
+    </div>
+</section>

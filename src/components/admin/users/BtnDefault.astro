@@ -1,0 +1,26 @@
+---
+const { style, title, styleSpan } = Astro.props;
+---
+
+<p class=`
+${style}
+relative overflow-hidden py-[4px] px-[15px] flex items-center gap-[10px] rounded-[30px] inline font-semibold cursor-default
+`>
+    {title}
+
+    <slot />
+    <span class=`${styleSpan} absolute left-0 top-0 w-full h-full -z-10`></span>
+
+</p>
+
+<style>
+    .premium{
+        background-image: linear-gradient(135deg, rgb(253, 232, 48) 0%, rgb(254, 162, 23) 100%);
+    }
+    .verificado{
+        background-image: linear-gradient(135deg, rgb(102, 255, 0) 0%, rgb(22, 184, 98) 51.88%, rgb(0, 133, 143) 100%);
+    }
+    .active{
+        background-color: red!important;
+    }
+</style>

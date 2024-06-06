@@ -1,5 +1,5 @@
 ---
-const { title, style, type, name } = Astro.props;
+const { title, style, type, name, placeholder } = Astro.props;
 ---
 
 <script src="./Input.js"></script>
@@ -9,12 +9,14 @@ const { title, style, type, name } = Astro.props;
     <input 
         class=`
             ${style}
-            py-[10px] px-[15px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-full block duration-300 transition-all `
+            py-[10px] px-[15px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-full block duration-300 transition-all`
         type={type}
-        required
+        required              
         name={name}
         minlength="3"
-        maxlength="60">
+        maxlength="60"
+        placeholder={placeholder}
+        >
 
     <span class="iconCheck absolute top-[67%] translate-y-[-50%] right-[15px] text-green-500">
         <svg   width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>

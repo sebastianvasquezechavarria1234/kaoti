@@ -1,0 +1,88 @@
+---
+import Title from "../../Title.astro";
+import Card from "../users/Card.astro";
+import BtnPremium from "./BtnNoPremium.astro";
+import BtnVerificado from "./BtnVerificado.astro";
+---
+
+<section class="relative z-10 mt-[120px] pb-[120px]">
+    <Title 
+        title="Panel de administración"
+        subTitle="(Usuarios)"
+    />
+    <div class="relative flex gap-[10px] mb-[20px]">
+        <span class="absolute left-[18px] top-[50%] translate-y-[-50%]">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+        </span>
+        <input 
+             class="py-[10px] pl-[55px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-[90%] block duration-300 transition-all max-sm:w-full"
+            type="text"          
+            placeholder="Buscando usuario?"
+        >
+        <input 
+            class="py-[12px] px-[20px] bg-blue-500 rounded-[6px] text-black font-semibold"
+            type="submit"
+            value="Buscar">
+    </div>
+
+    <div class="flex flex-col gap-[20px]">
+        <Card
+            styleActive="active"
+            bankNumber="48909787063"
+            title="UsersName 1" 
+            stylePremium="bg-transparent"
+            styleVerificado="bg-transparent"
+        />
+        <Card
+            styleActive="active"
+            bankNumber="1234567890"
+            title="UsersName 2" 
+            stylePremium="bg-white/80"
+            styleVerificado="bg-transparent"
+        />
+        <Card
+            styleActive="NoActive"
+            bankNumber="45678901234567"
+            title="UsersName 3" 
+            stylePremium="bg-white/80"
+            styleVerificado="bg-white/80"
+        />
+        <Card
+            styleActive="NoActive"
+            bankNumber="45678901234567"
+            title="UsersName 4" 
+            stylePremium="bg-transparent"
+            styleVerificado="bg-white/80"
+        />
+        <Card
+            styleActive="active"
+            bankNumber="45678901234567"
+            title="UsersName 5" 
+            stylePremium="bg-transparent"
+            styleVerificado="bg-transparent"
+        />
+        <Card
+            styleActive="active"
+            bankNumber="45678901234567"
+            title="UsersName 6" 
+            stylePremium="bg-transparent"
+            styleVerificado="bg-transparent"
+        />
+        <Card
+            styleActive="active"
+            bankNumber="45678901234567"
+            title="UsersName 7" 
+            stylePremium="bg-transparent"
+            styleVerificado="bg-transparent"
+        />
+    </div>
+</section>
+
+<style>
+    @media screen and (max-width: 600px){
+        input[type="submit"]{
+            display: none;
+        }
+        
+    }
+</style>

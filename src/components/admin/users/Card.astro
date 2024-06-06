@@ -1,0 +1,58 @@
+---
+import BtnPremium from "./BtnPremium.astro"
+import BtnNoPremium from "./BtnNoPremium.astro"
+import BtnVerificado from "./BtnVerificado.astro"
+import BtnNoVerificado from "./BtnNoVerificado.astro"
+
+
+const {title, bankNumber, stylePremium, styleVerificado, styleActive} = Astro.props;
+---
+
+<article class="p-[24px] rounded-[10px] border-[1px] border-white/30 bg-white/10">
+    <div class="flex items-center gap-[20px] mb-[20px]">
+        <picture class="w-[60px] h-[60px] rounded-full overflow-hidden">
+            <img 
+                class="w-full h-full object-cover"
+                src="/avatar.jpeg" 
+                alt="avatar users">
+        </picture>
+        <!-- USERSNAME -->
+        <div class="flex flex-col">
+            <h4 class="mb-0">
+                {title}
+            </h4>
+            <p class=`${styleActive} flex items-center gap-[5px]`>
+                <span class="w-[10px] h-[10px] rounded-full bg-[currentColor] block"></span>
+                Activo
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-wrap gap-[20px] justify-between">
+        <p>
+            Bank Number : 
+            <!-- BANK NUMBER -->
+            <span>{bankNumber}</span>
+        </p>
+        <div class="flex flex-wrap items-center gap-[10px]">
+            <BtnPremium
+                stylePremium={stylePremium}
+             />
+
+            <BtnVerificado 
+                styleVerificado={styleVerificado}
+            />
+
+            <a class="underline" href="">Acciones</a>
+        </div>
+
+    </div>
+</article>
+
+<style>
+    .active{
+        color: rgba(107, 246, 107, 0.861);
+    }
+    .NoActive{
+        color: rgb(220, 110, 110);
+    }
+</style>
