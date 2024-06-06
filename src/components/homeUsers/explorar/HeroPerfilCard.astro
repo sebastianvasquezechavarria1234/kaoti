@@ -1,0 +1,93 @@
+---
+---
+
+<!-- CARD POST  -->
+<article class="relative w-full rounded-[20px] overflow-hidden flex flex-col justify-between">
+    <!-- IMG POST -->
+    <img 
+        class="absolute top-0 left-0 w-full h-full"
+        src="/reportes-3.avif" 
+        alt="coment user">
+    <!-- HEADER CARD -->
+     <div class="header relative flex justify-between w-full p-[20px] z-10">
+        <!-- AVATAR CARD HEADER -->
+         <div class="flex gap-[10px] items-center">
+             <picture class="w-[60px] h-[60px] block bg-red-500 rounded-full overflow-hidden">
+                 <img 
+                     class="w-full h-full object-cover"
+                     src="/avatar.jpeg" 
+                     alt="avatar">
+             </picture>
+             <div class="block">
+                 <p class="verificado font-bold">
+                    Victor
+                    <slot />
+                </p>
+                 <p>Hace 3 dias</p>
+             </div>
+         </div>
+         <div class="iconMn w-[60px] cursor-pointer h-[60px] flex flex-col items-center justify-center  z-10 relative">
+            <div class="w-[10px] h-[10px] rounded-full bg-white relative block"></div>
+            <div class="w-[10px] h-[10px] rounded-full bg-white relative block"></div>
+            <div class="w-[10px] h-[10px] rounded-full bg-white relative block"></div>
+         </div>
+     </div>
+
+     <!-- PRE FOOTER CARD -->
+      <div class="relative z-10 flex flex-col">
+        <div class="footer w-full relative flex justify-evenly  gap-[20px] p-[20px]">
+            <div class="text-center">
+                <p>13</p>
+                <p>Post</p>
+            </div>
+            <div class="text-center">
+                <p>4</p>
+                <p>Seguidores</p>
+            </div>
+            <div class="text-center">
+                <p>12</p>
+                <p>Seguidos</p>
+            </div>
+            <div class="text-center flex items-end">
+                <p>Acciones</p>
+            </div>
+        </div>
+      </div>
+
+</article>
+
+<style>
+    article{
+        height: 700px;
+    }
+    @media screen and (max-width: 600px){
+        article{
+            height: 120vw;
+        }
+    }
+    .header{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.664));
+        z-index: 40;
+    }
+    .footer{
+        background: linear-gradient(to bottom, (0, 0, 0, 0), rgba(0, 0, 0, 0.664));
+        backdrop-filter: blur(10px);
+    }
+    .verificado{
+        color: rgb(0, 149, 255);
+    }
+    img{
+        filter: brightness(70%);
+    }
+    .iconMn{
+        gap: 4px;
+        justify-content: space-around;
+        transform: scale(.6);
+    }
+    .icons{
+        padding: 3px 12px;
+        background-color: rgba(255, 255, 255, 0.222);
+        backdrop-filter: blur(10px);
+    }
+
+</style>
