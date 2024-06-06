@@ -3,17 +3,15 @@ import Layout from "../../layouts/Layout.astro";
 import LayoutMaxWidth from "../../layouts/LayoutMaxWidth.astro"; 
 import HeaderUsers from "../../layouts/headerUsers/HeaderUsers.astro"
 import MnResponsiveUsers from "../../layouts/MnResponsiveUsers/MnResponsiveUsers.astro";
-import Title from "../../components/Title.astro";
+import Hero from "../../components/homeUsers/notificaciones/hero.astro"
 ---
 
 <Layout title="Komunly | Notificaiones">
     <HeaderUsers />
 
     <MnResponsiveUsers />
-    <LayoutMaxWidth>
-        <Title 
-            title="Notificaciones"
-        />
 
+    <LayoutMaxWidth>
+        <Hero />
     </LayoutMaxWidth>
 </Layout>
