@@ -1,0 +1,147 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import LayoutMaxWidth from "../../../layouts/LayoutMaxWidth.astro";
+import HeaderUsers from "../../../layouts/headerUsers/HeaderUsers.astro";
+import MnResponsiveUsers from "../../../layouts/MnResponsiveUsers/MnResponsiveUsers.astro";
+import Title from "../../../components/Title.astro";
+---
+
+<Layout title="Komunly | Explorar Calendario">
+    <HeaderUsers />
+    <MnResponsiveUsers />
+    <LayoutMaxWidth
+        style="max-w-[800px]"
+    >
+        <section class="mt-[120px] pb-[120px]">
+            <Title 
+                title="Calendario"
+            />
+             <!-- tabs -->
+    <div class="flex items-center gap-[10px] mb-[20px]">
+        <a 
+            class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/HomeUsers/Explorar">
+            Post
+        </a>
+        <a 
+            class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/HomeUsers/explorar/Search">
+            Explorar
+        </a>
+        <a 
+            class="active py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/HomeUsers/explorar/Calendario">
+            Calendario
+        </a>
+
+    </div>
+            <article class="w-full rounded-[10px] bg-white/10 border-[1px] border-white/30">
+                <!-- HEADER -->
+                <div class="flex justify-between items-center p-[20px] border-b-[1px] border-white/30">
+                    <h4>Junio</h4>
+                    <div class="flex items-center gap-[10px]">
+                        <div class="w-[60px] h-[60px] flex justify-center items-center relative bg-white/30 cursor-pointer rounded-[10px]">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+                        </div>
+                        <div class="w-[60px] h-[60px] flex justify-center items-center relative bg-white/30 cursor-pointer rounded-[10px] rotate-180">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l6 6" /><path d="M5 12l6 -6" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- BODY -->
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p__responsive">Domingo</p>
+                    <p class="p__responsive">lunes</p>
+                    <p class="p__responsive">Martes</p>
+                    <p class="p__responsive">Miercoles</p>
+                    <p class="p__responsive">Jueves</p>
+                    <p class="p__responsive">Viernes</p>
+                    <p class="p__responsive">Sabado</p>
+                 </div>
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p opacity">26</p>
+                    <p class="p opacity">27</p>
+                    <p class="p opacity">28</p>
+                    <p class="p opacity">29</p>
+                    <p class="p opacity">30</p>
+                    <p class="p opacity">31</p>
+                    <p class="p">1</p>
+                 </div>
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p">2</p>
+                    <p class="p">3</p>
+                    <p class="p">4</p>
+                    <p class="p">5</p>
+                    <p class="p">6</p>
+                    <p class="p">7</p>
+                    <p class="p">8</p>
+                 </div>
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p">9</p>
+                    <p class="p">10</p>
+                    <p class="p">11</p>
+                    <p class="p">12</p>
+                    <p class="p">13</p>
+                    <p class="p">14</p>
+                    <p class="p">15</p>
+                 </div>
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p">16</p>
+                    <p class="p">17</p>
+                    <p class="p">18</p>
+                    <p class="p">19</p>
+                    <p class="p">20</p>
+                    <p class="p">21</p>
+                    <p class="p">22</p>
+                 </div>
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p">23</p>
+                    <p class="p">24</p>
+                    <p class="p">25</p>
+                    <p class="p">26</p>
+                    <p class="p">27</p>
+                    <p class="p">28</p>
+                    <p class="p">29</p>
+                 </div>
+                 <div class="flex w-full p-[20px] justify-between items-center">
+                    <p class="p">30</p>
+                    <p class="p opacity">1</p>
+                    <p class="p opacity">2</p>
+                    <p class="p opacity">3</p>
+                    <p class="p opacity">4</p>
+                    <p class="p opacity">5</p>
+                    <p class="p opacity">6</p>
+                 </div>
+            </article>
+        </section>
+    </LayoutMaxWidth>
+</Layout>
+
+<style>
+    .p{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+    }
+    .p:hover{
+        background-color: rgba(255, 255, 255, 0.201);
+    }
+    .opacity{
+        opacity: .3;
+    }
+    @media screen and (max-width: 600px){
+        .p__responsive{
+            font-size: 12px;
+        }
+        
+    }
+    .active{
+        background-color: transparent;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+    }
+</style>
