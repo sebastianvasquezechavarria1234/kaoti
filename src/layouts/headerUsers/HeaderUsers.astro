@@ -1,0 +1,74 @@
+---
+import BtnDefault from "../../components/BtnDefault.astro";
+---
+
+<header class="sticky top-0 z-50 flex items-center backdrop-blur-[16px] border-b-[1px] border-white/30 h-[70px]">
+    <nav class="flex justify-between w-full items-center py-[10px] max-w-[1280px] mx-auto px-[20px]">
+        <ul>
+            <li>
+                <a 
+                    class="text-[24px] font-bold opacity-100"
+                    href="/">Komunly</a>
+            </li>
+        </ul>
+        <ul class="flex items-center gap-[20px]">
+            <li>
+                <a 
+                    class=""
+                    href="/HomeUsers/Home">Inicio</a>
+            </li>
+            <li>
+                <a 
+                    class=""
+                    href="/HomeUsers/Explorar">Explorar</a>
+            </li>
+            <li>
+                <a 
+                    class=""
+                    href="/HomeUsers/Notificaciones">Notificaciones</a>
+            </li>
+            <li>
+                <BtnDefault 
+                href="/HomeUsers/Perfil"
+                style="bg-blue-500 block text-[var(--blue-dark)] font-semibold"
+                title="Perfil"
+                />
+            </li>
+            <li id="iconMn" class="flex flex-col gap-[5px] cursor-pointer opacity-80">
+                <span class="block w-[20px] h-[1px] bg-white"></span>
+                <span class="block w-[20px] h-[1px] bg-white"></span>
+                <span class="block w-[20px] h-[1px] bg-white"></span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    .bg__blue{
+        background-color: var(--blue);
+    }
+    header nav ul:nth-child(2):hover li{
+        filter: blur(5px);
+    }
+    header nav ul:nth-child(2) li{
+        transition: all .3s ease-in-out;
+    }
+    header nav ul:nth-child(2) li:hover{
+        filter: blur(0px);
+        opacity: 1;
+    }
+    header nav ul:nth-child(2) li:nth-child(5){
+        display: none
+    }
+    @media screen and (max-width: 600px) {
+        header nav ul:nth-child(2) li:nth-child(1),
+        header nav ul:nth-child(2) li:nth-child(2),
+        header nav ul:nth-child(2) li:nth-child(3),
+        header nav ul:nth-child(2) li:nth-child(4){
+            display: none;
+        }
+        header nav ul:nth-child(2) li:nth-child(5){
+        display: none;
+    }
+    }
+</style>

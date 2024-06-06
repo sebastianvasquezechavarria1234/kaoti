@@ -1,0 +1,25 @@
+---
+const { img, title, style } = Astro.props;
+---
+
+<article class="flex flex-col gap-[10px] items-center">
+    <picture class="relative overflow-hidden cursor-pointer w-[60px] h-[60px] flex justify-center items-center bg-white rounded-full  duration-300">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="black"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
+        <img 
+            class=`
+                ${style}
+                absolute top-0 left-0 w-full h-full object-cover
+            `
+            src={img}>
+    </picture>
+    <p>{title}</p>
+</article>
+
+<style>
+    p{
+        text-align: center;
+    }
+    .scale{
+        transform: scale(.5);
+    }
+</style>

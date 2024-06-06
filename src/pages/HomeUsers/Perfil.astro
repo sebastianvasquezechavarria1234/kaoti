@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LayoutMaxWidth from "../../layouts/LayoutMaxWidth.astro"; 
+import HeaderUsers from "../../layouts/headerUsers/HeaderUsers.astro"
+import MnResponsiveUsers from "../../layouts/MnResponsiveUsers/MnResponsiveUsers.astro";
+import Title from "../../components/Title.astro";
+---
+
+<Layout title="Komunly | Perfil">
+    <HeaderUsers />
+
+    <MnResponsiveUsers />
+    <LayoutMaxWidth>
+        <Title 
+            title="Perfil"
+        />
+
+    </LayoutMaxWidth>
+</Layout>

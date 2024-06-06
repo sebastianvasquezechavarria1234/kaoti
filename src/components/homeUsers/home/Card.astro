@@ -1,0 +1,105 @@
+---
+---
+
+<!-- CARD POST  -->
+<article class="relative w-full rounded-[20px] overflow-hidden flex flex-col justify-between">
+    <!-- IMG POST -->
+    <img 
+        class="absolute top-0 left-0 w-full h-full"
+        src="/reportes-3.avif" 
+        alt="coment user">
+    <!-- HEADER CARD -->
+     <div class="header relative flex justify-between w-full p-[20px] z-10">
+        <!-- AVATAR CARD HEADER -->
+         <div class="flex gap-[10px] items-center">
+             <picture class="w-[60px] h-[60px] block bg-red-500 rounded-full overflow-hidden">
+                 <img 
+                     class="w-full h-full object-cover"
+                     src="/avatar.jpeg" 
+                     alt="avatar">
+             </picture>
+             <div class="block">
+                 <p class="verificado font-bold">
+                    Victor
+                    <slot />
+                </p>
+                 <p>Hace 3 dias</p>
+             </div>
+         </div>
+         <div class="iconMn w-[60px] cursor-pointer h-[60px] flex flex-col items-center justify-center  z-10 relative">
+            <div class="w-[10px] h-[10px] rounded-full bg-white relative block"></div>
+            <div class="w-[10px] h-[10px] rounded-full bg-white relative block"></div>
+            <div class="w-[10px] h-[10px] rounded-full bg-white relative block"></div>
+         </div>
+     </div>
+
+     <!-- PRE FOOTER CARD -->
+      <div class="relative z-10 flex flex-col">
+        <div class="relative flex flex-wrap justify-center gap-[10px] p-[20px]">
+            <div class="icons flex relative items-center gap-[20px] rounded-[30px]">
+                <svg    width="24"  height="24"  viewBox="0 0 24 24"  fill="red"  class="icon icon-tabler icons-tabler-filled icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" /></svg>
+                <p>1</p>
+            </div>
+            <!-- tab -->
+            <div class="icons flex relative items-center gap-[20px] rounded-[30px]">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-message"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 3a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-4.724l-4.762 2.857a1 1 0 0 1 -1.508 -.743l-.006 -.114v-2h-1a4 4 0 0 1 -3.995 -3.8l-.005 -.2v-8a4 4 0 0 1 4 -4zm-4 9h-6a1 1 0 0 0 0 2h6a1 1 0 0 0 0 -2m2 -4h-8a1 1 0 1 0 0 2h8a1 1 0 0 0 0 -2" /></svg>
+                <p>3</p>
+            </div>
+            <!-- tab -->
+            <div class="icons flex relative items-center gap-[20px] rounded-[30px]">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-share"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M8.7 10.7l6.6 -3.4" /><path d="M8.7 13.3l6.6 3.4" /></svg>
+                <p>2</p>
+            </div>
+            <!-- tab -->
+            <div class="icons flex relative items-center gap-[20px] rounded-[30px]">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-flag-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 4c.852 0 1.297 .986 .783 1.623l-.076 .084l-3.792 3.793l3.792 3.793c.603 .602 .22 1.614 -.593 1.701l-.114 .006h-13v6a1 1 0 0 1 -.883 .993l-.117 .007a1 1 0 0 1 -.993 -.883l-.007 -.117v-16a1 1 0 0 1 .883 -.993l.117 -.007h14z" /></svg>
+                <p>4</p>
+            </div>
+
+        </div>
+        <div class="footer w-full reltive p-[20px]">
+            <p>
+                Vitor :
+                <span class="italic">
+                    Television 2
+                </span>
+            </p>
+        </div>
+      </div>
+
+</article>
+
+<style>
+    article{
+        height: 700px;
+    }
+    @media screen and (max-width: 600px){
+        article{
+            height: 120vw;
+        }
+    }
+    .header{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.664));
+        z-index: 40;
+    }
+    .footer{
+        background-color: rgba(255, 255, 255, 0.272);
+        backdrop-filter: blur(10px);
+    }
+    .verificado{
+        color: rgb(0, 149, 255);
+    }
+    img{
+        filter: brightness(70%);
+    }
+    .iconMn{
+        gap: 4px;
+        transform: scale(.6);
+    }
+    .icons{
+        padding: 3px 12px;
+        background-color: rgba(255, 255, 255, 0.222);
+        backdrop-filter: blur(10px);
+    }
+
+</style>
