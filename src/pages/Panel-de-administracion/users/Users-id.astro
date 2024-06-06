@@ -1,0 +1,17 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import LayoutMaxWidth from "../../../layouts/LayoutMaxWidth.astro";
+import Header from "../../../layouts/headerAdmin/Header.astro";
+import Hero from "../../../components/admin/users/users-id/Hero.astro";
+---
+
+<Layout title="Komunly | Panel de control Users id">
+
+    <Header />
+    
+    <LayoutMaxWidth
+        style="flex items-center min-h-[100vh]"
+        >
+        <Hero />
+    </LayoutMaxWidth>
+</Layout>

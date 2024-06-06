@@ -1,0 +1,83 @@
+---
+import Input from "../../../autentificacion/Input.astro"
+import Title from "../../../Title.astro"
+---
+
+<section class="w-[500px] mx-auto py-[120px]">
+    
+    <!-- FORM -->
+    <form 
+        class="w-full bg-white/5 p-[24px] rounded-[10px] border-[1px] border-white/20"
+        action=""
+        method="">
+        <Title 
+            title="Acciones"
+        />
+        <!-- FORM HEADER -->
+        <div class="flex items-center gap-[20px] mb-[20px]">
+            <!-- INPUT FILE AVATAR PERFIL -->
+            <label class="relative rounded-full cursor-pointer bg-red-500 w-[60px] h-[60px] block bg-[url(/avatar.jpeg)] bg-cover bg-center">
+                <input 
+                    class="cursor-pointer absolute left-0 top-0 w-full h-full opacity-0"
+                    type="file">
+                <span class="bg-gray-900 border-white/30 border-[1px] w-[30px] h-[30px] flex justify-center items-center rounded-full absolute top-[60%] left-[60%]">
+                    <svg   width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-camera"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /></svg>
+                </span>    
+            </label>
+
+        </div>
+        <!-- USERS NAME -->
+         <Input 
+            type="text"
+            title="Nombre del usuario :"
+         />
+        <!-- USERS NAME -->
+         <Input 
+            type="email"
+            title="Correo electronic :"
+         />
+        <!-- USERS NAME -->
+         <Input 
+            type="text"
+            title="Balance :"
+         />
+         <div class="flex  gap-[10px]">
+            <!-- SELECT PREMIUM -->
+             <label class="w-full">
+                <p class="opacity-100">Premium:</p>
+                <select 
+                    class="py-[14px] px-[15px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-full block "
+                    name="" 
+                    id="">
+                    <option value="No Premium">No Premium</option>
+                    <option value="Premium">Premium</option>
+                </select>
+             </label>
+            <!-- SELECT PREMIUM -->
+             <label class="w-full">
+                <p class="opacity-100">Verificado:</p>
+                <select 
+                    class="py-[14px] px-[15px] outline-none rounded-[6px] border-[1px] border-white/20 bg-white/5 w-full block "
+                    name="" 
+                    id="">
+                    <option value="No verificado">No verificado</option>
+                    <option value="Verificado">Verificado</option>
+                </select>
+             </label>
+         </div>
+         <a 
+            class="underline text-blue-300 block my-[20px]" 
+            href="/Panel-de-administracion/Users">Volver</a>
+
+         <input 
+            class="bg-blue-500 w-full p-[12px] block text-black rounded-[6px] font-bold cursor-pointer hover:bg-blue-600 duration-300"
+            type="submit" 
+            value="Enviar ">
+    </form>
+</section>
+
+<style>
+    select option{
+        color: black;
+    }
+</style>
