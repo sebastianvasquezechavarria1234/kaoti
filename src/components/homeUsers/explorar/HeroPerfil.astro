@@ -39,6 +39,25 @@ import Post from "../home/Post.astro"
         </a>
      </div>
 
+      <!-- tabs -->
+    <div class="flex items-center gap-[10px] mt-[60px]">
+        <a 
+            class="active py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/">
+            Post
+        </a>
+        <a 
+            class=" py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/">
+            tra reposts
+        </a>
+        <a 
+            class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/">
+            otra informacion
+        </a>
+
+    </div>
      <div class="mt-[-40px] translate-y-[70px]">
          <Title
             title="Post"
@@ -49,3 +68,12 @@ import Post from "../home/Post.astro"
 
 
 </section>
+
+
+<style>
+    .active{
+        background-color: transparent;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+    }
+</style>
