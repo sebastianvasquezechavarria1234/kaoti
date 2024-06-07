@@ -1,0 +1,74 @@
+---
+import Title from "../../../Title.astro";
+import Chat from "./Chat.astro";
+---
+
+<section class="relative z-10 mt-[120px] pb-[120px]">
+    <a 
+        class="flex justify-start items-center gap-[10px] mb-[20px]"
+        href="/HomeUsers/Chat">
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+        <Title 
+            style="margin"
+            title="Volver"
+        />
+    </a>
+    <!-- CHAT -->
+    <article class="relative bg-white/5 border-[1px] border-white/30 rounded-[10px] h-[700px] w-full">
+        <!-- HEADER -->
+        <div class="sticky top-0 p-[20px] flex justify-between border-b-[1px] border-white/30">
+            <div class="flex gap-[20px] items-center">
+                <picture class="w-[60px] h-[60px] flex justify-center items-center rounded-full overflow-hidden">
+                    <img 
+                        class="w-full h-full object-cover object-center"
+                        src="/avatar.jpeg" 
+                        alt="avatar">
+                </picture>
+                <h4>UserName</h4>
+            </div>
+            <div class="w-[60px] h-[60px] flex justify-center items-center gap-[3px] flex-col relative">
+                <span class="w-[5px] h-[5px] block relative bg-white rounded-full"></span>
+                <span class="w-[5px] h-[5px] block relative bg-white rounded-full"></span>
+                <span class="w-[5px] h-[5px] block relative bg-white rounded-full"></span>
+            </div>
+        </div>
+        <!-- BODY -->
+         <div class="w-full p-[20px] flex flex-col gap-[20px]">
+            <div class="w-full flex justify-end">
+                <div class="flex flex-col">
+                    <p class="py-[5px] px-[12px] rounded-[30px] text-black bg-blue-500 font-semibold opacity-100">
+                        Hola
+                    </p>
+                    <p>Hace 1 mes</p>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-end">
+                <div class="flex flex-col">
+                    <p class="py-[5px] px-[12px] rounded-[30px] text-black bg-blue-500 font-semibold opacity-100">
+                        New coment
+                    </p>
+                    <p>Hace 3 semanas</p>
+                </div>
+            </div>
+            <div class="w-full flex justify-start">
+                <div class="flex flex-col">
+                    <p class="py-[5px] px-[12px] rounded-[30px] text-black bg-gray-300 font-semibold opacity-100">
+                        Hola como estas?
+                    </p>
+                    <p>Hace 3 semanas</p>
+                </div>
+            </div>
+            <div class="w-full flex justify-end">
+                <div class="flex flex-col">
+                    <p class="py-[5px] px-[12px] rounded-[30px] text-black bg-blue-500 font-semibold opacity-100">
+                        Bien y tu
+                    </p>
+                    <p>Hace 2 semanas</p>
+                </div>
+            </div>
+
+         </div>
+        <Chat />
+    </article>
+</section>

@@ -1,0 +1,29 @@
+---
+const { style, usersName, valor, day, coment } = Astro.props;
+---
+
+<article class="w-full border-b-[1px] border-white/30 pb-[20px]">
+    <h5>{usersName}</h5>
+    <div class="flex items-center justify-between">
+        <p class="opacity-100">{coment}</p>
+        <div class="flex items-center gap-[10px]">
+            {valor}
+
+            <span 
+                class=`${style} w-[50px] h-[50px] flex justify-center items-center rounded-full`
+            >
+                <slot />
+            </span>
+        </div>
+    </div>
+    <p>Hace {day}</p>
+</article>
+
+<style>
+    .green{
+        background-color: rgb(195, 255, 195);
+    }
+    .red{
+        background-color: rgb(255, 192, 192);
+    }
+</style>

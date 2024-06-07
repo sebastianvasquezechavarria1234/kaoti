@@ -1,0 +1,8 @@
+---
+const {title} = Astro.props;
+---
+
+<article class="cursor-default w-[100px] h-[100px] relative bg-white/5 flex flex-col justify-center items-center rounded-[20px] border-[1px] border-white/30 gap-[10px] max-sm:w-[80px] max-sm:h-[80px] p-[10px]">
+    <slot />
+    <p>{title}</p>
+</article>

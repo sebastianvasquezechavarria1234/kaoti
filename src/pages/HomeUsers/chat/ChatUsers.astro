@@ -1,0 +1,20 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import LayoutMaxWidth from "../../../layouts/LayoutMaxWidth.astro";
+import HeaderUsers from "../../../layouts/headerUsers/HeaderUsers.astro";
+import MnResponsiveUsers from "../../../layouts/MnResponsiveUsers/MnResponsiveUsers.astro";
+import Hero from "../../../components/homeUsers/chat/chatUsers/Hero.astro";
+---
+
+<Layout title="Komunly | ChatUsers">
+
+    <HeaderUsers />
+
+    <MnResponsiveUsers />
+
+    <LayoutMaxWidth
+        style="max-w-[600px]"
+    >
+        <Hero />
+    </LayoutMaxWidth>
+</Layout>

@@ -28,6 +28,16 @@ import BtnDefault from "../../components/BtnDefault.astro";
                     href="/HomeUsers/Notificaciones">Notificaiones</a>
             </li>
             <li>
+                <a 
+                    class=""
+                    href="/HomeUsers/Transacciones">Transacciones</a>
+            </li>
+            <li>
+                <a 
+                    class=""
+                    href="/HomeUsers/Chat">Chat</a>
+            </li>
+            <li>
                 <BtnDefault 
                 href="/HomeUsers/Perfil"
                 style="bg-blue-500 block text-[var(--blue-dark)] font-semibold"
@@ -57,17 +67,19 @@ import BtnDefault from "../../components/BtnDefault.astro";
         filter: blur(0px);
         opacity: 1;
     }
-    header nav ul:nth-child(2) li:nth-child(5){
+    header nav ul:nth-child(2) li:nth-child(7){
         display: none
     }
     @media screen and (max-width: 600px) {
         header nav ul:nth-child(2) li:nth-child(1),
         header nav ul:nth-child(2) li:nth-child(2),
         header nav ul:nth-child(2) li:nth-child(3),
-        header nav ul:nth-child(2) li:nth-child(4){
+        header nav ul:nth-child(2) li:nth-child(4),
+        header nav ul:nth-child(2) li:nth-child(5),
+        header nav ul:nth-child(2) li:nth-child(6){
             display: none;
         }
-        header nav ul:nth-child(2) li:nth-child(5){
+        header nav ul:nth-child(2) li:nth-child(7){
         display: flex;
     }
     }
