@@ -1,0 +1,148 @@
+---
+import Title from "../../../../components/Title.astro"
+import Layout from "../../../../layouts/Layout.astro"
+import LayoutMaxWidth from "../../../../layouts/LayoutMaxWidth.astro"
+import HeaderUsers from "../../../../layouts/headerUsers/HeaderUsers.astro"
+---
+
+<Layout title="Komunly Perfil">
+    <HeaderUsers />
+    <LayoutMaxWidth
+        style="max-w-[600px]"
+    >
+        <section class="mt-[120px] pb-[120px]">
+            <Title 
+                title="Perfil"
+            />
+            <!-- HEADER -->
+            <div class="flex gap-[30px] items-center">
+                <label class="w-[200px] h-[200px] flex justify-center items-center rounded-full bg-[url(/avatar.jpeg)] bg-cover bg-center max-sm:w-[100px] max-sm:h-[100px]">
+                    <input
+                        class="w-full h-full object-cover opacity-0 cursor-pointer" 
+                        type="file">
+                </label>
+                <div class="flex flex-col gap-[10px]">
+                    <h4>UserName</h4>
+                    <p class="text-green-300 flex gap-[5px] items-center">
+                        <span class="w-[8px] h-[8px] relative block rounded-full bg-green-300"></span>
+                        Activo
+                    </p>
+                </div>
+            </div>
+        
+            <!-- TAB -->
+             <div class="flex gap-[10px] mt-[30px]">
+                <a 
+                    class="py-[3px] px-[15px] flex items-center gap-[10px] text-black bg-blue-500 rounded-[30px] font-bold"
+                    href="">
+                    Seguir
+                    <svg   width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-corner-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 18v-6a3 3 0 0 1 3 -3h10l-4 -4m0 8l4 -4" /></svg>
+                </a>
+                <a 
+                    class="py-[3px] px-[15px] flex items-center gap-[10px] text-black bg-green-300 rounded-[30px] font-bold"
+                    href="">
+                    Enviar mensaje
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /></svg>
+                </a>
+             </div>
+        
+              <!-- tabs -->
+            <div class="flex items-center gap-[10px] mt-[60px]">
+                <a 
+                    class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+                    href="/HomeUsers/Perfil">
+                    Post
+                </a>
+                <a 
+                    class=" py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+                    href="/HomeUsers/explorar/perfil/Tab2">
+                    tra reposts
+                </a>
+                <a 
+                    class="active py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+                    href="/HomeUsers/explorar/perfil/Tab3">
+                    otra informacion
+                </a>
+        
+            </div>
+             <div class="mt-[40px]">
+                 <Title
+                    title="Acciones"
+                 />
+             </div>
+
+             <div class="flex flex-col gap-[10px]">
+                <article class="flex gap-[30px] w-full p-[24px] bg-white/10 border-[1px] border-white/30 rounded-[10px]">
+                    <picture class="w-[60px] h-[60px] relative flex justify-center items-center rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+                    </picture>
+                    <div class="">
+                        <h4 class="mb-0">UserName</h4>
+                        <p>Nombre del usario</p>
+                    </div>
+                </article>
+
+                <article class="flex gap-[30px] w-full p-[24px] bg-white/10 border-[1px] border-white/30 rounded-[10px]">
+                    <picture class="w-[60px] h-[60px] relative flex justify-center items-center rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-message-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.821 4.91c3.899 -2.765 9.468 -2.539 13.073 .535c3.667 3.129 4.168 8.238 1.152 11.898c-2.841 3.447 -7.965 4.583 -12.231 2.805l-.233 -.101l-4.374 .931l-.04 .006l-.035 .007h-.018l-.022 .005h-.038l-.033 .004l-.021 -.001l-.023 .001l-.033 -.003h-.035l-.022 -.004l-.022 -.002l-.035 -.007l-.034 -.005l-.016 -.004l-.024 -.005l-.049 -.016l-.024 -.005l-.011 -.005l-.022 -.007l-.045 -.02l-.03 -.012l-.011 -.006l-.014 -.006l-.031 -.018l-.045 -.024l-.016 -.011l-.037 -.026l-.04 -.027l-.002 -.004l-.013 -.009l-.043 -.04l-.025 -.02l-.006 -.007l-.056 -.062l-.013 -.014l-.011 -.014l-.039 -.056l-.014 -.019l-.005 -.01l-.042 -.073l-.007 -.012l-.004 -.008l-.007 -.012l-.014 -.038l-.02 -.042l-.004 -.016l-.004 -.01l-.017 -.061l-.007 -.018l-.002 -.015l-.005 -.019l-.005 -.033l-.008 -.042l-.002 -.031l-.003 -.01v-.016l-.004 -.054l.001 -.036l.001 -.023l.002 -.053l.004 -.025v-.019l.008 -.035l.005 -.034l.005 -.02l.004 -.02l.018 -.06l.003 -.013l1.15 -3.45l-.022 -.037c-2.21 -3.747 -1.209 -8.391 2.413 -11.119z" /></svg>
+                    </picture>
+                    <div class="">
+                        <h4 class="mb-0">Biografía</h4>
+                        <p>description de la biografìa</p>
+                    </div>
+                </article>
+
+                <article class="flex gap-[30px] w-full p-[24px] bg-white/10 border-[1px] border-white/30 rounded-[10px]">
+                    <picture class="w-[60px] h-[60px] relative flex justify-center items-center rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-coin-bitcoin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 3.34a10 10 0 1 1 -15 8.66l.005 -.324a10 10 0 0 1 14.995 -8.336zm-4 2.66a1 1 0 0 0 -1 1h-1a1 1 0 0 0 -2 0a1 1 0 1 0 0 2v6a1 1 0 0 0 0 2c0 1.333 2 1.333 2 0h1a1 1 0 0 0 2 0v-.15c1.167 -.394 2 -1.527 2 -2.85l-.005 -.175a3.063 3.063 0 0 0 -.734 -1.827c.46 -.532 .739 -1.233 .739 -1.998c0 -1.323 -.833 -2.456 -2 -2.85v-.15a1 1 0 0 0 -1 -1zm.09 7c.492 0 .91 .437 .91 1s-.418 1 -.91 1h-2.09v-2h2.09zm0 -4c.492 0 .91 .437 .91 1c0 .522 -.36 .937 -.806 .993l-.104 .007h-2.09v-2h2.09z" /></svg>
+                    </picture>
+                    <div class="">
+                        <h4 class="mb-0">Bank Number</h4>
+                        <p>10456789345</p>
+                    </div>
+                </article>
+
+                <article class="flex gap-[30px] w-full p-[24px] bg-white/10 border-[1px] border-white/30 rounded-[10px]">
+                    <picture class="w-[60px] h-[60px] relative flex justify-center items-center rounded-full">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-article"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 3a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h14zm-2 12h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm0 -4h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm0 -4h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z" /></svg>
+                    </picture>
+                    <div class="">
+                        <h4 class="mb-0">Registration</h4>
+                        <p>Day</p>
+                    </div>
+                </article>
+             </div>
+        
+        
+        </section>
+
+    </LayoutMaxWidth>
+</Layout>
+
+
+
+<style>
+    .active{
+        background-color: transparent;
+        color: var(--blue);
+        border: 1px solid var(--blue);
+    }
+    article:nth-child(1) picture{
+        background-image: linear-gradient(135deg, rgb(255, 94, 0) 0%, rgb(245, 69, 98) 54.11%, rgb(195, 45, 225) 100%);
+    }
+    article:nth-child(2) picture{
+        background-image: linear-gradient(135deg, rgb(102, 255, 0) 0%, rgb(22, 184, 98) 51.88%, rgb(0, 133, 143) 100%);
+    }
+    article:nth-child(3) picture{
+        background-image: linear-gradient(135deg, rgb(253, 232, 48) 0%, rgb(254, 162, 23) 100%);
+    }
+    article:nth-child(4) picture{
+        background-image: linear-gradient(135deg, rgb(255, 0, 170), rgb(156, 66, 245) 50%, rgb(93, 45, 225));
+    }
+    article:nth-child(5) picture{
+        background-image: linear-gradient(135deg, rgb(61, 245, 179) 0%, rgb(40, 175, 233) 100%);
+    }
+    article:nth-child(6) picture{
+        background-image: linear-gradient(135deg, rgb(0, 187, 255), rgb(156, 66, 245) 53%, rgb(93, 45, 225));
+    }
+</style>
