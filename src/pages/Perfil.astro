@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LayoutMaxWidth from "../layouts/LayoutMaxWidth.astro"; 
+import HeaderUsers from "../layouts/headerUsers/HeaderUsers.astro"
+import MnResponsiveUsers from "../layouts/MnResponsiveUsers/MnResponsiveUsers.astro";
+import HeroPerfil from "../components/homeUsers/explorar/HeroPerfil.astro";
+---
+
+<Layout title="Komunly | Perfil">
+    <HeaderUsers />
+
+    <MnResponsiveUsers />
+    <LayoutMaxWidth
+        style="max-w-[600px]"
+    >
+        <HeroPerfil />
+    </LayoutMaxWidth>
+</Layout>

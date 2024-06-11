@@ -1,8 +1,8 @@
 ---
-import Title from "../../../../components/Title.astro"
-import Layout from "../../../../layouts/Layout.astro"
-import LayoutMaxWidth from "../../../../layouts/LayoutMaxWidth.astro"
-import HeaderUsers from "../../../../layouts/headerUsers/HeaderUsers.astro"
+import Title from "../../components/Title.astro"
+import Layout from "../../layouts/Layout.astro"
+import LayoutMaxWidth from "../../layouts/LayoutMaxWidth.astro"
+import HeaderUsers from "../../layouts/headerUsers/HeaderUsers.astro"
 ---
 
 <Layout title="Komunly Perfil">
@@ -67,20 +67,20 @@ import HeaderUsers from "../../../../layouts/headerUsers/HeaderUsers.astro"
               <!-- tabs -->
             <div class="flex items-center gap-[10px] mt-[60px]">
                 <a 
-                    class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
-                    href="/HomeUsers/Perfil">
-                    Post
-                </a>
-                <a 
-                    class=" py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
-                    href="/HomeUsers/explorar/perfil/Tab2">
-                    tra reposts
-                </a>
-                <a 
-                    class="active py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
-                    href="/HomeUsers/explorar/perfil/Tab3">
-                    otra informacion
-                </a>
+            class="active py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/Perfil">
+            Post
+        </a>
+        <a 
+            class=" py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/perfil/Tab2">
+            tra reposts
+        </a>
+        <a 
+            class="py-[10px] px-[16px] opacity-100 font-bold text-black bg-blue-500 rounded-[6px]"
+            href="/perfil/Tab3">
+            otra informacion
+        </a>
         
             </div>
              <div class="mt-[40px]">

@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LayoutMaxWidth from "../layouts/LayoutMaxWidth.astro";
+import HeaderUsers from "../layouts/headerUsers/HeaderUsers.astro";
+import MnResponsiveUsers from "../layouts/MnResponsiveUsers/MnResponsiveUsers.astro";
+import History from "../components/homeUsers/home/History.astro";
+import Post from "../components/homeUsers/home/Post.astro";
+---
+
+<Layout title="Komunly | Home">
+
+    <HeaderUsers />
+
+    <MnResponsiveUsers />
+    <LayoutMaxWidth
+        style="max-w-[600px]"
+    >
+        <History />
+
+        <Post />
+    </LayoutMaxWidth>
+</Layout>
